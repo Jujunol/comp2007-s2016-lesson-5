@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="comp2007_s2016_lesson_5.Site" %>
+<%@ Register Src="~/User_Controls/Navbar.ascx" TagName="Navbar" TagPrefix="bs3" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- <link href="Content/bootstrap.min.css" rel="stylesheet" /> -->
+    <link href="https://bootswatch.com/slate/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/custom-styles.css" rel="stylesheet" />
+
+    <script src="Scripts/jquery-2.2.3.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <bs3:Navbar runat="server"></bs3:Navbar>
+        <div class="container">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <div style="margin-bottom: 80px"></div>
+    <footer class="navbar navbar-fixed-bottom">
+        <div class="navbar-brand">
+            &copy; 2016 Contoso University
+        </div>
+    </footer>
+</body>
+</html>

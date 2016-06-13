@@ -34,7 +34,7 @@ namespace comp2007_s2016_lesson_5
                 if(department != null)
                 {
                     Name.Text = department.Name;
-                    Budget.Text = "" + department.Budget;
+                    Budget.Text = department.Budget.ToString();
                 }
                               
             }
@@ -52,15 +52,20 @@ namespace comp2007_s2016_lesson_5
                 department = new Department()
                 {
                     Name = Name.Text,
-                    Budget = Convert.ToInt32(Budget.Text)
+                    Budget = Convert.ToDecimal(Budget.Text)
                 };
 
-                if(Request.QueryString.Count <= 0)
+                //if (department == null) department = new Department();
+                //department.Name = Name.Text;
+                //department.Budget = Convert.ToDecimal(Budget.Text);
+
+                if (Request.QueryString.Count <= 0)
                 {
                     db.Departments.Add(department);
                 }
 
                 db.SaveChanges();
+                Response.Redirect("~/Departments.aspx");
             }
         }
     }

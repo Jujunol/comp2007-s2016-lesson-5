@@ -16,8 +16,8 @@
                     </asp:DropDownList>
                 </div>
 
-                <asp:GridView ID="StudentGridView" runat="server" AutoGenerateColumns="false" DataKeyNames="StudentID" OnRowDeleting="StudentGridView_RowDeleting"
-                    CssClass="table table-striped table-bordered table-hover"
+                <asp:GridView ID="StudentGridView" runat="server" AutoGenerateColumns="false" DataKeyNames="StudentID"
+                    CssClass="table table-striped table-bordered table-hover" OnRowDeleting="StudentGridView_RowDeleting"
                     AllowPaging="true" PageSize="3" OnPageIndexChanging="StudentGridView_PageIndexChanging"
                     AllowSorting="true" OnSorting="StudentGridView_Sorting" OnRowDataBound="StudentGridView_RowDataBound">
                     <Columns>

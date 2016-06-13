@@ -22,10 +22,6 @@ namespace comp2007_s2016_lesson_5
                 Session["SortDirection"] = "ASC";
                 this.FetchStudents();
             }
-            if(Session["SortColumn"] == null)
-            {
-                Session["SortColumn"] = "StudentID";
-            }
         }
 
         protected void FetchStudents()
@@ -105,11 +101,11 @@ namespace comp2007_s2016_lesson_5
                     {
                         if(Session["SortDirection"].ToString() == "ASC")
                         {
-                            linkButton.Text = " <i class='fa fa-lg fa-caret-up'></i>";
+                            linkButton.Text = " <i class='fa fa-lg fa-caret-down'></i>";
                         }
                         else
                         {
-                            linkButton.Text = " <i class='fa fa-lg fa-caret-down'></i>";
+                            linkButton.Text = " <i class='fa fa-lg fa-caret-up'></i>";
                         }
 
                         e.Row.Cells[i].Controls.Add(linkButton);
